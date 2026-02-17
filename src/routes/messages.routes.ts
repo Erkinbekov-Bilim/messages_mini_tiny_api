@@ -22,8 +22,13 @@ messagesRouter.post("/", async (req: Request, res: Response) => {
 });
 
 messagesRouter.get("/", async (req: Request, res: Response) => {
-  const messages = await messagesFileStorage.getMessages();
-  return res.send(messages);
+  try {
+    const messages = await messagesFileStorage.getMessages();
+    return res.send(messages);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: "server error :(" });
+  }
 });
 
 export default messagesRouter;
