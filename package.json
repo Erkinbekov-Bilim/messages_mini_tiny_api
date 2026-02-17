@@ -7,18 +7,10 @@
     "dev": "tsx watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Erkinbekov-Bilim/messages_mini_tiny_api.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/Erkinbekov-Bilim/messages_mini_tiny_api/issues"
-  },
-  "homepage": "https://github.com/Erkinbekov-Bilim/messages_mini_tiny_api#readme",
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.2.3",
