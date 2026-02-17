@@ -1,0 +1,24 @@
+import express from "express";
+import type { Request, Response } from "express";
+import type { IMessage, IMessageMutation } from "../types/message.type.js";
+import productsFileStorage from "../repositories/messages.repository.js";
+
+const messagesRouter = express.Router();
+
+messagesRouter.post("/", async (req: Request, res: Response) => {
+  const messageData: IMessageMutation = req.body;
+
+  if (!messageData.message) {
+    return res.status(400).send({ error: "please enter your message" });
+  }
+
+  const newMessage: IMessageMutation = {
+    message: messageData.message,
+  };
+
+  const message: IMessage = await productsFileStorage.createMessage(newMessage);
+
+  return res.send(message);
+});
+
+export default messagesRouter;
