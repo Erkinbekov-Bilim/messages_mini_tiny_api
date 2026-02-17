@@ -1,12 +1,6 @@
 # Messages Mini Tiny API
 
-1. Compiles TypesScript into JS:
-
-```bash
-npm run build
-```
-
-2. Runs the sever in watch mode:
+Runs the sever in watch mode:
 
 ```bash
 npm run dev
