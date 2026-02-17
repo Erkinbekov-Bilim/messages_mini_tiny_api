@@ -21,4 +21,9 @@ messagesRouter.post("/", async (req: Request, res: Response) => {
   return res.send(message);
 });
 
+messagesRouter.get("/", async (req: Request, res: Response) => {
+  const messages = await productsFileStorage.getMessages();
+  return res.send(messages);
+});
+
 export default messagesRouter;
