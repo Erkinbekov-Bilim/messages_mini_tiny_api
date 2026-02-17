@@ -4,7 +4,7 @@ import { MESSAGES_PATH } from "../constants/constants.js";
 
 
 
-const productsFileStorage = {
+const messagesFileStorage = {
   async createMessage(message: IMessageMutation) {
     const date: Date = new Date();
     const dateTime: string = date.toISOString();
@@ -35,4 +35,4 @@ const productsFileStorage = {
   },
 };
 
-export default productsFileStorage;
+export default messagesFileStorage;
